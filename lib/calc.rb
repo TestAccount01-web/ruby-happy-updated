@@ -8,4 +8,10 @@ module Calc
   def multiply(a, b)
     a * b
   end
+
+  def divide(a, b)
+    raise ZeroDivisionError, 'divided by 0' if b.zero?
+
+    a / b
+  end
 end
