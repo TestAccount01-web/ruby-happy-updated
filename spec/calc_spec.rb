@@ -20,4 +20,14 @@ RSpec.describe Calc do
       expect { Calc.divide(10, 0) }.to raise_error(ZeroDivisionError)
     end
   end
+
+  describe '.percent' do
+    it 'returns a part as a percentage of the whole' do
+      expect(Calc.percent(25, 200)).to eq(12.5)
+    end
+
+    it 'raises an error when the whole is zero' do
+      expect { Calc.percent(10, 0) }.to raise_error(ZeroDivisionError)
+    end
+  end
 end
